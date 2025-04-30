@@ -35,6 +35,7 @@ samtools fastq isoseq_ccs_demux_flnc.bam > isoseq_ccs_demux_flnc.fastq
 **5. Mandalorian pipeline**
 
 **Installation**
+
 git clone https://github.com/christopher-vollmers/Mandalorion.git
 
 cd Mandalorion
