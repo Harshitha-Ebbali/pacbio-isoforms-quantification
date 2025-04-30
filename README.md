@@ -1,13 +1,15 @@
 # pacbio-isoforms-quantification
 A streamlined pipeline for isoform-level quantification of PacBio Iso-Seq data🧬.
 
-This repository walks you through a full Iso-Seq analysis pipeline using PacBio SMRT tools and Mandalorion, from raw subreads to isoform quantification. The main steps include:
+Full-length transcriptome analysis pipeline using PacBio Iso-Seq data, leveraging SMRT tools and Mandalorion to generate and quantify isoforms using a reference genome.
+
+The main steps include:
 
 1. Generating high-quality CCS reads
 
 2. Demultiplexing barcoded samples with Lima
 
-3. Refining reads to obtain full-length non-concatemer (FLNC) sequences
+3. Refining reads to obtain full-length non-concatemer(FLNC) sequences
 
 4. Converting refined BAM to FASTQ format
 
@@ -43,9 +45,16 @@ cd Mandalorion
 chmod +x setup.sh
 
 sh setup.sh
-
+```
+**Running Mandalorian pipeline**
+```
 python3 Mando.py -p working_dir -g reference.gtf -G reference.fasta -f Consensus_reads.fofn
 ```
 .fofn file structure is simply a text file with one line per input fasta/fastq file. You can mix and match fasta/fastq files and gzipped and unzipped files.
+
+reference.fasta - reference genome
+
+reference.gtf - reference gtf file
+
 
 An output file Isoforms.filtered.clean.quant: Number of reads from each supplied fasta file associated with each isoform, can be used for the differential expression analysis using DESeq or EdgeR.
