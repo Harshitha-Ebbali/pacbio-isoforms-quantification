@@ -1,9 +1,18 @@
 # pacbio-isoforms-quantification
-A streamlined pipeline for isoform-level quantification of PacBio Iso-Seq data🧬.
 
-Full-length transcriptome analysis pipeline using PacBio Iso-Seq data, leveraging SMRT tools and Mandalorion to generate and quantify isoforms using a reference genome.
+Full-length transcriptome analysis pipeline using PacBio Iso-Seq data, leveraging SMRT tools and Mandalorion to generate and quantify isoforms using a reference genome 🧬.
 
-The main steps include:
+**Requirements**
+
+- PacBio SMRT Tools v10.2 (ccs, lima, isoseq3)
+
+- Samtools
+
+- Python 3
+
+- Mandalorion
+
+**Pipeline Overview**
 
 1. Generating high-quality CCS reads
 
@@ -16,7 +25,7 @@ The main steps include:
 5. Running Mandalorion for isoform detection and quantification
 
 
-**Step-by-Step Guide**
+**Usage**
 
 **1. Generate CCS Reads**
 ```
@@ -58,3 +67,10 @@ reference.gtf - reference gtf file
 
 
 An output file Isoforms.filtered.clean.quant: Number of reads from each supplied fasta file associated with each isoform, can be used for the differential expression analysis using DESeq or EdgeR.
+
+**References**
+
+- Volden, R., Schimke, K.D., Byrne, A. et al. Identifying and quantifying isoforms from accurate full-length transcriptome sequencing reads with Mandalorion. Genome Biol 24, 167 (2023). https://doi.org/10.1186/s13059-023-02999-6
+
+- PacBio SMRT Tools
+
