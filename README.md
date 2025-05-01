@@ -1,4 +1,4 @@
-# pacbio-isoforms-quantification
+# PacBio-isoforms-quantification
 
 Full-length transcriptome analysis pipeline using PacBio Iso-Seq data, leveraging SMRT tools and Mandalorion to generate and quantify isoforms using a reference genome 🧬.
 
@@ -55,11 +55,20 @@ chmod +x setup.sh
 
 sh setup.sh
 ```
+
+This will instal minimap2, abpoa. Use pip to install mappy.
+
 **Running Mandalorian pipeline**
+
+With defaulit parameters
 ```
 python3 Mando.py -p working_dir -g reference.gtf -G reference.fasta -f Consensus_reads.fofn
 ```
 .fofn file structure is simply a text file with one line per input fasta/fastq file. You can mix and match fasta/fastq files and gzipped and unzipped files.
+
+```
+/path/to/isoseq_ccs_demux_flnc.fastq
+```
 
 reference.fasta - reference genome
 
